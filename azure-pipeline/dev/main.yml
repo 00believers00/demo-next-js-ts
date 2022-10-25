@@ -1,0 +1,18 @@
+trigger:
+- azure-pipelines
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  project_name: 'demo_next_js'
+  tag: '$(project_name):latest'
+  imgae_name: '$(project_name)_image'
+  config_port: '4100:3000'
+
+jobs:
+  - job: DemoNextJs
+    displayName: 'Demo NextJS Front End'
+    steps:
+      - template: 'build.yml'
+      - template: 'deploy.yml'
