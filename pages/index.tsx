@@ -33,6 +33,7 @@ const Index: React.FC = () => {
       >
         Turn {turn} Light
       </button>
+      <p>Edit for master pipeline</p>
     </div>
   )
 }
